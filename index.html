@@ -4,7 +4,99 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Milan Parikh - Professional Portfolio</title>
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    
+    <!-- Schema.org structured data for search engines -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Milan Parikh",
+      "jobTitle": "Lead Enterprise Data Architect",
+      "description": "IEEE Senior Member, IETE Fellow, and BCS Branch Secretary specializing in enterprise architecture, data modernization, and Microsoft Power Platform",
+      "url": "https://milan-parikh.com",
+      "image": "https://milan-parikh.com/profile-photo.jpg",
+      "worksFor": {
+        "@type": "Organization",
+        "name": "Cytel Inc.",
+        "url": "https://www.cytel.com"
+      },
+      "alumniOf": [
+        {
+          "@type": "Organization",
+          "name": "Your University Name"
+        }
+      ],
+      "memberOf": [
+        {
+          "@type": "Organization",
+          "name": "IEEE",
+          "url": "https://www.ieee.org",
+          "description": "Senior Member"
+        },
+        {
+          "@type": "Organization",
+          "name": "Institution of Electronics and Telecommunication Engineers",
+          "alternateName": "IETE",
+          "url": "https://www.iete.org",
+          "description": "Fellow"
+        },
+        {
+          "@type": "Organization",
+          "name": "British Computer Society",
+          "alternateName": "BCS",
+          "url": "https://www.bcs.org",
+          "description": "Branch Secretary"
+        }
+      ],
+      "knowsAbout": [
+        "Enterprise Architecture",
+        "Data Modernization",
+        "Microsoft Power Platform",
+        "Azure AI Services",
+        "Low-Code Development",
+        "Machine Learning",
+        "Cloud Computing",
+        "Enterprise Data Architecture"
+      ],
+      "sameAs": [
+        "https://linkedin.com/in/yourprofile",
+        "https://github.com/parikhMilan",
+        "https://scholar.google.com/citations?user=YOUR_ID",
+        "https://orcid.org/YOUR-ORCID-ID",
+        "https://www.researchgate.net/profile/YOUR_PROFILE",
+        "https://ieeexplore.ieee.org/author/YOUR_ID",
+        "https://www.webofscience.com/wos/author/rid/NHP-2260-2025"
+      ],
+      "award": [
+        "Microsoft Power Platform Super User",
+        "IEEE Senior Member",
+        "IETE Fellow",
+        "IEEE Day 2025 Ambassador"
+      ],
+      "hasOccupation": {
+        "@type": "Occupation",
+        "name": "Lead Enterprise Data Architect",
+        "occupationalCategory": "15-1299.09",
+        "responsibilities": "Enterprise architecture, data modernization, Microsoft Power Platform implementation, mentoring 3,500+ professionals"
+      }
+    }
+    </script>
+    
+    <!-- Open Graph meta tags for social media -->
+    <meta property="og:title" content="Milan Parikh - Lead Enterprise Data Architect">
+    <meta property="og:description" content="IEEE Senior Member specializing in enterprise architecture and Microsoft Power Platform">
+    <meta property="og:url" content="https://milan-parikh.com">
+    <meta property="og:type" content="profile">
+    <meta property="og:image" content="https://milan-parikh.com/profile-photo.jpg">
+    
+    <!-- Twitter Card meta tags -->
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Milan Parikh - Lead Enterprise Data Architect">
+    <meta name="twitter:description" content="IEEE Senior Member specializing in enterprise architecture and Microsoft Power Platform">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css" 
+         integrity="sha512-h9FcoyWjHcOcmEVkxOfTLnmZFWIH0iZhZT1H2TbOq55xssQGEJHEaIm+PgoUaZbRvQTNTluNOEfb1ZRy6D3BOw==" 
+         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         :root {
             --bg-primary: #f8f9fa;
@@ -608,7 +700,7 @@
                 <div class="nav-card" onclick="showPage('peer-review')">
                     <h3>Peer Review Activities</h3>
                     <p>Global contributions across 8 countries</p>
-                    <span class="count">203 Reviews</span>
+                    <span class="count">219 Reviews</span>
                 </div>
 
                 <div class="nav-card" onclick="showPage('publications')">
@@ -638,11 +730,11 @@
                 
                 <div class="stats">
                     <div class="stat-card">
-                        <div class="number">203</div>
+                        <div class="number">219</div>
                         <div class="label">Total Reviews</div>
                     </div>
                     <div class="stat-card">
-                        <div class="number">189</div>
+                        <div class="number">204</div>
                         <div class="label">Manuscripts</div>
                     </div>
                     <div class="stat-card">
@@ -660,12 +752,16 @@
                         <h4>International Conference on Computational Intelligence and Soft Computing</h4>
                     </div>
                     <div class="journal-card">
-                        <span class="count">18</span>
+                        <span class="count">22</span>
                         <h4>International Journal of Systems Assurance Engineering and Management</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">13</span>
                         <h4>International Conference on Computer and Applications</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">12</span>
+                        <h4>International Conference on Artificial Intelligence, Computation, Communication and Network Security</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">10</span>
@@ -674,10 +770,6 @@
                     <div class="journal-card">
                         <span class="count">8</span>
                         <h4>IEEE Consumer Communications and Networking Conference</h4>
-                    </div>
-                    <div class="journal-card">
-                        <span class="count">8</span>
-                        <h4>International Conference on Artificial Intelligence, Computation, Communication and Network Security</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">7</span>
@@ -988,8 +1080,8 @@
 
                     <div class="award-card">
                         <h4>ResearchGate Profile</h4>
-                        <p>Research Interest Score: 8.9 • 228 Reads • 7 Citations • 8 Recommendations</p>
-                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Higher than 25% of all ResearchGate members & 91% of members who first published in 2025</p>
+                        <p>Research Interest Score: 11.2 • 257 Reads • 7 Citations • 13 Recommendations</p>
+                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Higher than 28% of all ResearchGate members & 93% of members who first published in 2025</p>
                         <a href="https://www.researchgate.net/profile/Milan-Parikh-2" target="_blank" class="view-link">View Profile →</a>
                     </div>
 
@@ -1463,7 +1555,9 @@
         </div>
     </div>
 
-    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"
+         integrity="sha512-puJW3E/qXDqYp9IfhAI54BJEaWIfloJ7JWs7OeD5i6ruC9JZL1gERT1wjtwXFlh7CjE7ZJ+/vcRZRkIYIb6p4g=="
+         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script>
         let map = null;
 
