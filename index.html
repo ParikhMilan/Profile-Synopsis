@@ -849,13 +849,39 @@
         [data-theme="dark"] .jc-q1 { background:#479ef5; color:#0b1a2b; }
         [data-theme="dark"] .jc-q2 { background:#b4a0ff; color:#1b1530; }
     
+
+        /* Career journey */
+        :root { --journey-accent: #5b5fc7; }
+        [data-theme="dark"] { --journey-accent: #9ea2ff; }
+        .jr-lead { color: var(--text-secondary); font-size: 1.05rem; max-width: 72ch; margin: 0 0 24px; line-height: 1.7; }
+        .jr-phases { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 340px), 1fr)); gap: 16px; margin-bottom: 36px; }
+        .jr-phase { background: var(--bg-card); border-radius: 12px; box-shadow: var(--elev-2); padding: 20px 22px; transition: box-shadow .15s, transform .15s; }
+        .jr-phase:hover { box-shadow: var(--elev-8); transform: translateY(-2px); }
+        .jr-phase .jr-yr { display: inline-block; font-size: 0.8rem; font-weight: 600; color: #ffffff; background: var(--accent-primary); padding: 2px 10px; border-radius: 999px; margin-bottom: 10px; white-space: nowrap; }
+        .jr-phase.rec .jr-yr { background: var(--journey-accent); }
+        .jr-phase h4 { color: var(--text-primary); font-size: 1.1rem; margin: 0 0 8px; }
+        .jr-phase p { color: var(--text-secondary); font-size: 0.93rem; line-height: 1.65; margin: 0; }
+        .jr-legend { display: flex; flex-wrap: wrap; gap: 18px; margin: 0 0 18px; font-size: 0.85rem; color: var(--text-secondary); }
+        .jr-legend i { display: inline-block; width: 26px; height: 8px; border-radius: 4px; vertical-align: middle; margin-right: 6px; }
+        .jr-line { position: relative; padding-left: 48px; }
+        .jr-seg { position: relative; }
+        .jr-seg::before { content: ""; position: absolute; left: -33px; top: 0; bottom: 0; width: 8px; border-radius: 4px; background: var(--accent-primary); }
+        .jr-seg.rec::before { background: var(--journey-accent); }
+        .jr-stn { position: relative; padding: 6px 0 18px; }
+        .jr-stn::before { content: ""; position: absolute; left: -38px; top: 9px; width: 18px; height: 18px; border-radius: 50%; background: var(--bg-secondary); border: 4px solid var(--accent-primary); }
+        .jr-seg.rec .jr-stn::before { border-color: var(--journey-accent); }
+        .jr-stn .jr-when { font-weight: 600; color: var(--text-primary); font-size: 0.95rem; white-space: nowrap; }
+        .jr-stn .jr-what { color: var(--text-primary); margin: 2px 0; }
+        .jr-stn .jr-meta { color: var(--text-secondary); font-size: 0.85rem; margin: 0; }
+        .jr-stn ul { margin: 6px 0 0; padding-left: 18px; color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
+        @media (max-width: 768px) { .jr-line { padding-left: 38px; } .jr-seg::before { left: -26px; } .jr-stn::before { left: -31px; } }
     </style>
 </head>
 <body>
     <header class="appbar">
         <div class="appbar-inner">
             <div class="appbar-brand" onclick="showPage('home')"><img src="https://raw.githubusercontent.com/ParikhMilan/Profile-Synopsis/b23df77f7ad62181c95dfb6598ac2843e127b880/Resources/profile.jpeg" alt=""><span>Milan Parikh</span></div>
-            <nav class="appbar-nav" aria-label="Sections"><a data-page="awards" onclick="showPage('awards')">Awards</a><a data-page="speaking" onclick="showPage('speaking')">Speaking</a><a data-page="judging" onclick="showPage('judging')">Judging</a><a data-page="peer-review" onclick="showPage('peer-review')">Peer review</a><a data-page="publications" onclick="showPage('publications')">Publications</a><a data-page="citations" onclick="showPage('citations')">Citations</a><a data-page="media" onclick="showPage('media')">Media</a><a data-page="memberships" onclick="showPage('memberships')">Memberships</a><a data-page="experience" onclick="showPage('experience')">Experience</a><a data-page="timeline" onclick="showPage('timeline')">Timeline</a></nav>
+            <nav class="appbar-nav" aria-label="Sections"><a data-page="awards" onclick="showPage('awards')">Awards</a><a data-page="speaking" onclick="showPage('speaking')">Speaking</a><a data-page="judging" onclick="showPage('judging')">Judging</a><a data-page="peer-review" onclick="showPage('peer-review')">Peer review</a><a data-page="publications" onclick="showPage('publications')">Publications</a><a data-page="citations" onclick="showPage('citations')">Citations</a><a data-page="media" onclick="showPage('media')">Media</a><a data-page="memberships" onclick="showPage('memberships')">Memberships</a><a data-page="experience" onclick="showPage('experience')">Experience</a><a data-page="journey" onclick="showPage('journey')">Journey</a><a data-page="timeline" onclick="showPage('timeline')">Timeline</a></nav>
             <button class="theme-toggle" onclick="toggleTheme()" aria-label="Toggle dark mode"><span id="theme-icon">🌙</span></button>
         </div>
     </header>
@@ -938,14 +964,21 @@
                 <div class="nav-card" onclick="showPage('experience')">
                     <span class="nc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" > <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M3 7m0 2a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2z" /> <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" /> <path d="M12 12l0 .01" /> <path d="M3 13a20 20 0 0 0 18 0" /> </svg></span>
                     <h3>Professional Experience</h3>
-                    <p>14+ years in enterprise architecture</p>
+                    <p>12+ years in enterprise architecture</p>
                     <span class="count">6 Roles</span>
+                </div>
+
+                <div class="nav-card" onclick="showPage('journey')">
+                    <span class="nc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" > <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M3 19a2 2 0 1 0 4 0a2 2 0 0 0 -4 0" /> <path d="M19 7a2 2 0 1 0 0 -4a2 2 0 0 0 0 4z" /> <path d="M11 19h5.5a3.5 3.5 0 0 0 0 -7h-8a3.5 3.5 0 0 1 0 -7h4.5" /> </svg></span>
+                    <h3>Career Journey</h3>
+                    <p>From developer to recognized architect</p>
+                    <span class="count">2011 to 2026</span>
                 </div>
 
                 <div class="nav-card" onclick="showPage('timeline')">
                     <span class="nc-icon"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" > <path stroke="none" d="M0 0h24v24H0z" fill="none"/> <path d="M4 16l6 -7l5 5l5 -6" /> <path d="M15 14m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M10 9m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M4 16m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> <path d="M20 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0" /> </svg></span>
                     <h3>Achievement Timeline</h3>
-                    <p>14 years of consistent professional growth</p>
+                    <p>12 years of consistent professional growth</p>
                     <span class="count">Interactive</span>
                 </div>
             </div>
@@ -2923,12 +2956,53 @@
                 </div>
             </div>
         </div>
+        <!-- CAREER JOURNEY PAGE -->
+        <div id="journey" class="page">
+            <div class="section">
+                <button class="back-button" onclick="showPage('home')">← Back to Home</button>
+                <h2>Career Journey</h2>
+                <p class="jr-lead">Milan Parikh works in enterprise data architecture: the design of data platforms, integration and governance on the Microsoft stack, including Microsoft Fabric, Power Platform, Dynamics 365 and Azure. His record shows a steady progression from software developer in 2014 to lead enterprise data architect, followed by recognition from independent institutions in the United States, the United Kingdom, Europe, the Middle East and Asia.</p>
+
+                <div class="jr-phases">
+                    <div class="jr-phase"><span class="jr-yr">2011 to 2014</span><h4>Technical foundation</h4><p>Bachelor's degree in Electrical Engineering in 2011. Master's degree in Electrical and Computer Engineering and Oracle Java SE 6 Programmer certification in 2014. First US role in September 2014, after graduation, as Software Developer at KnackTek, building SharePoint 2013 environments and workflow automation.</p></div>
+                    <div class="jr-phase"><span class="jr-yr">2015 to 2021</span><h4>Enterprise platform depth</h4><p>Nearly six years as Senior Software Developer at Dart Container Corporation, delivering Dynamics CRM implementations across Sales, Service, Marketing and XRM. Senior Software Developer at Ford Motor Credit Company from November 2020. Microsoft certifications built year by year: MCSA in 2015, MCSD in 2017, Azure in 2019, Power Platform in 2020 and Power Platform Developer in 2021.</p></div>
+                    <div class="jr-phase"><span class="jr-yr">2021 to 2024</span><h4>Consulting and architecture</h4><p>Senior Software Consultant at Avanade, leading Power Platform Center of Excellence governance. Microsoft Power Platform Solution Architect (PL-600) in 2022. Solution lead for Dynamics 365 Sales and Customer Service at Hitachi Solutions America, then Technical Solution Architect at MCA Connect.</p></div>
+                    <div class="jr-phase"><span class="jr-yr">2024 onward</span><h4>Lead enterprise data architect</h4><p>Lead Enterprise Data Architect at Cytel, a global clinical research organization, from May 2024. Architected the company's Microsoft Fabric enterprise data platform and its data governance, security and access standards. Microsoft Fabric Data Engineer (DP-700) in April 2026.</p></div>
+                    <div class="jr-phase rec"><span class="jr-yr">2025 to 2026</span><h4>Recognition by the field</h4><p>Microsoft Most Valuable Professional. Elected Fellow of the IET and Fellow of BCS. More than 260 peer reviews verified on Web of Science, including IEEE Transactions on Dependable and Secure Computing and Scientific Reports. Judge for the CES Innovation Awards and the IEEE Computer Society Awards. Invited to speak by universities in Malta, Thailand, Malaysia and the United Arab Emirates. Coverage in The Times of India, India Today, TechTimes and IBTimes. Scholarly articles with 155 Google Scholar citations.</p></div>
+                    <div class="jr-phase rec"><span class="jr-yr">Practice to recognition</span><h4>Why the timing reflects maturity</h4><p>An architect earns standing only after delivering platforms at scale. The 2025 and 2026 recognition follows directly from more than a decade of progressive work across seven employers. The recognition is also continuous, and commitments extend into 2027: inaugural chair of the ACM Houston Professional Chapter, Secretary of the BCS Enterprise Architecture Specialist Group, the STAI 2027 conference, and a co-edited Cambridge Scholars Publishing volume.</p></div>
+                </div>
+
+                <h3>The progression</h3>
+                <div class="jr-legend"><span><i style="background:var(--accent-primary)"></i>Career and certifications</span><span><i style="background:var(--journey-accent)"></i>Recognition by others</span></div>
+                <div class="jr-line">
+                    <div class="jr-seg">
+                        <div class="jr-stn"><div class="jr-when">2011</div><p class="jr-what">B.S. Electrical Engineering</p><p class="jr-meta">SSIT, Gujarat, India</p></div>
+                        <div class="jr-stn"><div class="jr-when">2014</div><p class="jr-what">M.S. Electrical and Computer Engineering; Oracle Java SE 6 Programmer</p><p class="jr-meta">San Francisco Bay University</p></div>
+                        <div class="jr-stn"><div class="jr-when">Sep 2014</div><p class="jr-what">Software Developer, KnackTek</p><p class="jr-meta">First US role after graduation; SharePoint 2013 and workflow automation</p></div>
+                        <div class="jr-stn"><div class="jr-when">Jan 2015</div><p class="jr-what">Senior Software Developer, Dart Container Corporation</p><p class="jr-meta">Dynamics CRM implementations; MCSA 2015, MCSD 2017, Azure Fundamentals 2019</p></div>
+                        <div class="jr-stn"><div class="jr-when">Nov 2020</div><p class="jr-what">Senior Software Developer, Ford Motor Credit Company</p><p class="jr-meta">Dynamics 365 plugins and automation; Power Platform Developer 2021</p></div>
+                        <div class="jr-stn"><div class="jr-when">Jul 2021</div><p class="jr-what">Senior Software Consultant, Avanade</p><p class="jr-meta">Power Platform CoE governance; PL-600 Solution Architect 2022</p></div>
+                        <div class="jr-stn"><div class="jr-when">Oct 2022</div><p class="jr-what">Senior Software Consultant, Hitachi Solutions America</p><p class="jr-meta">Solution lead, Dynamics 365 Sales and Customer Service</p></div>
+                        <div class="jr-stn"><div class="jr-when">Nov 2023</div><p class="jr-what">Technical Solution Architect, MCA Connect</p><p class="jr-meta">Dynamics 365, Power Platform and Azure integration architecture</p></div>
+                        <div class="jr-stn"><div class="jr-when">May 2024</div><p class="jr-what">Lead Enterprise Data Architect, Cytel</p><p class="jr-meta">Microsoft Fabric enterprise data platform and governance; DP-700 in 2026</p></div>
+                    </div>
+                    <div class="jr-seg rec">
+                        <div class="jr-stn"><div class="jr-when">2025</div><p class="jr-what">Recognition begins across awards, media, speaking and community</p>
+                            <ul><li>Two INSPERA awards, CISCom 2025; ITLA 2025 and ISRLA 2025 awards</li><li>ET Young Industry Leaders 2025</li><li>DNA India, India.com, India Today and ET coverage</li><li>Keynotes at EAMCON 2025 and AIC 2025</li><li>Microsoft Power Platform Community Super User</li></ul></div>
+                        <div class="jr-stn"><div class="jr-when">2026</div><p class="jr-what">Recognition broadens to fellowships, judging and international invitations</p>
+                            <ul><li>Microsoft Most Valuable Professional</li><li>Elected Fellow of the IET</li><li>Judge, CES Innovation Awards and IEEE Computer Society Awards</li><li>Invited speaker, IEEE ICAUC (Thailand) and IEEE IMED (Malaysia); keynote, CISCom 2026 (Malta)</li><li>UK Registered Design 6510795 granted</li><li>Inaugural chair, ACM Houston Professional Chapter; General Chair, ATAI 2026</li><li>Finalist, UK IT Industry Awards, Engineer of the Year</li><li>Times of India, TechTimes and IBTimes coverage</li></ul></div>
+                        <div class="jr-stn"><div class="jr-when">2027</div><p class="jr-what">Continuing commitments</p><p class="jr-meta">ACM Houston chair term, BCS EASG Secretary, STAI 2027, Cambridge Scholars edited volume</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
         <!-- TIMELINE PAGE -->
         <div id="timeline" class="page">
             <div class="section">
                 <button class="back-button" onclick="showPage('home')">← Back to Home</button>
                 <h2>Achievement Timeline</h2>
-                <p style="color:var(--text-secondary); margin-bottom:28px; font-size:0.95rem;">14 years of consistent professional achievement across career, awards, certifications, publications, community, and media.</p>
+                <p style="color:var(--text-secondary); margin-bottom:28px; font-size:0.95rem;">12 years of consistent professional achievement across career, awards, certifications, publications, community, and media.</p>
 
                 <!-- FILTER BAR -->
                 <div id="tl-filter-bar" style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:28px;">
@@ -2943,7 +3017,7 @@
 
                 <!-- STATS ROW -->
                 <div class="stats" style="margin-bottom:28px;">
-                    <div class="stat-card"><div class="stat-number">14+</div><div class="stat-label">Years Active</div></div>
+                    <div class="stat-card"><div class="stat-number">12+</div><div class="stat-label">Years Active</div></div>
                     <div class="stat-card"><div class="stat-number">369</div><div class="stat-label">Peer Reviews</div></div>
                     <div class="stat-card"><div class="stat-number">19</div><div class="stat-label">Awards</div></div>
                     <div class="stat-card"><div class="stat-number">48</div><div class="stat-label">Publications</div></div>
@@ -2952,7 +3026,7 @@
                 <!-- ACTIVITY CHART -->
                 <div style="background:var(--bg-card); border:1px solid var(--border-color); border-radius:12px; padding:24px; margin-bottom:28px;">
                     <h3 style="margin-bottom:6px; color:var(--text-primary); font-size:1.1rem;">Achievement Activity by Year</h3>
-                    <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:20px;">Each bar shows total documented achievements per year. Consistent activity across all 14 years confirms sustained professional engagement.</p>
+                    <p style="color:var(--text-secondary); font-size:0.85rem; margin-bottom:20px;">Each bar shows total documented achievements per year. Consistent activity across every year confirms sustained professional engagement.</p>
                     <div id="tl-chart" style="display:flex; align-items:flex-end; gap:6px; height:120px;"></div>
                     <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:16px;">
                         <div style="display:flex;align-items:center;gap:6px;font-size:0.78rem;color:var(--text-secondary);"><div style="width:10px;height:10px;border-radius:2px;background:#6b9fda;"></div>Career</div>
@@ -3174,7 +3248,7 @@
           { year: 2015, month: "Jan", cat: "cert", icon: "✓", title: "Microsoft Certified Solution Associate (MCSA)", desc: "MCSA certification establishing core Microsoft platform competence", meta: "Microsoft · 2015" },
           { year: 2014, month: "Sep", cat: "career", icon: "🎓", title: "M.S. Electrical & Computer Engineering – San Francisco Bay University", desc: "Graduate degree with focus on data systems and applied computing", meta: "San Francisco Bay University · Fremont, CA · 2013–2014" },
           { year: 2014, month: "Jan", cat: "cert", icon: "✓", title: "Oracle Certified Java Developer", desc: "Oracle Certified Professional, Java SE 6 Programmer", meta: "Oracle · 2014" },
-          { year: 2013, month: "Jan", cat: "career", icon: "💼", title: "Software Developer – KnackTek", desc: "First US role; built SharePoint 2013 environments, custom components, and workflow automation for enterprise clients", meta: "KnackTek · Greater Atlanta Area · Jan 2013–Jan 2015" },
+          { year: 2014, month: "Sep", cat: "career", icon: "💼", title: "Software Developer – KnackTek", desc: "First US role after graduation; built SharePoint 2013 environments, custom components, and workflow automation for enterprise clients", meta: "KnackTek · Greater Atlanta Area · Sep 2014–Jan 2015" },
           { year: 2011, month: "Aug", cat: "career", icon: "🎓", title: "B.S. Electrical Engineering – SSIT Bharuch, India", desc: "Bachelor's degree in Electrical and Electronics Engineering; foundation for systems and technical thinking", meta: "SSIT · Gujarat, India · 2006–2011" },
         ];
 
