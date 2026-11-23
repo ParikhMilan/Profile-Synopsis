@@ -758,7 +758,7 @@
         .profile-initial { width: 148px; height: 148px; border: 4px solid rgba(255,255,255,0.85); box-shadow: 0 8px 24px rgba(0,0,0,0.25); }
         .cred-chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 4px 0 20px; }
         .cred-chips span { padding: 4px 12px; border-radius: 999px; background: rgba(255,255,255,0.16); border: 1px solid rgba(255,255,255,0.28); font-size: 0.82rem; font-weight: 600; letter-spacing: 0.02em; }
-        .contact-info { gap: 10px; }
+        .contact-info { gap: 10px; max-width: 760px; margin-left: auto; margin-right: auto; }
         .contact-info span { display: none; }
         .contact-info a { color: #ffffff; background: rgba(255,255,255,0.14); border: 1px solid rgba(255,255,255,0.3); padding: 8px 16px; border-radius: 999px; font-size: 0.9rem; font-weight: 500; transition: background .15s; }
         .contact-info a:hover { color: #ffffff; background: rgba(255,255,255,0.26); }
@@ -833,6 +833,22 @@
             .nav-card .count { font-size: 0.9em; margin-top: 6px; }
             .section h3 { font-size: 1.25em !important; }
         }
+            /* journal vs conference */
+        .jc-tag { display:inline-block; margin-top:8px; font-size:.72em; font-weight:700; letter-spacing:.04em; padding:3px 9px; border-radius:999px; }
+        .jc-q1 { background:#0f6cbd; color:#fff; }
+        .jc-q2 { background:#8764b8; color:#fff; }
+        .jc-c { background:transparent; color:var(--text-secondary); box-shadow: inset 0 0 0 1px var(--border-color, rgba(127,127,127,.4)); }
+        .journal-card.jc-journal { box-shadow: inset 4px 0 0 #0f6cbd, var(--elev-2); }
+        .journal-card.jc-journal:has(.jc-q2) { box-shadow: inset 4px 0 0 #8764b8, var(--elev-2); }
+        .journal-card.jc-journal:hover { box-shadow: inset 4px 0 0 #0f6cbd, var(--elev-8); }
+        .journal-card.jc-journal:has(.jc-q2):hover { box-shadow: inset 4px 0 0 #8764b8, var(--elev-8); }
+        .jc-legend { display:flex; flex-wrap:wrap; align-items:center; gap:8px 10px; margin:-8px 0 20px; color:var(--text-secondary); font-size:.92em; }
+        .jc-legend .jc-tag { margin-top:0; }
+        .jc-legend span:not(.jc-tag) { margin-right:10px; }
+        .jc-sum { margin-left:auto; }
+        [data-theme="dark"] .jc-q1 { background:#479ef5; color:#0b1a2b; }
+        [data-theme="dark"] .jc-q2 { background:#b4a0ff; color:#1b1530; }
+    
     </style>
 </head>
 <body>
@@ -854,11 +870,11 @@
                 <p class="subtitle">Lead Enterprise Data Architect</p>
                 <div class="cred-chips"><span>FIET</span><span>FBCS</span><span>FIETE</span><span>Microsoft MVP</span><span>IEEE Senior Member</span><span>DisF SCRS</span></div>
                 <div class="contact-info">
-                    <a href="https://www.linkedin.com/in/mjparikh" target="_blank">LinkedIn</a>
-                    <span>|</span>
-                    <a href="https://orcid.org/0009-0009-8613-7158" target="_blank">ORCID: 0009-0009-8613-7158</a>
-                    <span>|</span>
-                    <a href="https://www.webofscience.com/wos/author/record/NHP-2260-2025" target="_blank">Web of Science: NHP-2260-2025</a>
+                    <a href="https://www.linkedin.com/in/mjparikh" target="_blank" title="LinkedIn: mjparikh">LinkedIn</a>
+                    <a href="https://www.researchgate.net/profile/Milan-Parikh-2" target="_blank" title="ResearchGate profile">ResearchGate</a>
+                    <a href="https://scholar.google.com/citations?user=IKrH0tgAAAAJ" target="_blank" title="Google Scholar profile">Google Scholar</a>
+                    <a href="https://orcid.org/0009-0009-8613-7158" target="_blank" title="ORCID: 0009-0009-8613-7158">ORCID</a>
+                    <a href="https://www.webofscience.com/wos/author/record/NHP-2260-2025" target="_blank" title="Web of Science ResearcherID: NHP-2260-2025">Web of Science</a>
                 </div>
             </div>
 
@@ -1146,278 +1162,352 @@
 </div>
 
                 <h3 style="color: var(--text-primary); margin-bottom: 24px; font-size: 1.8em;">Verified Reviews by Conference &amp; Journal</h3>
+                <div class="jc-legend">
+                    <span class="jc-tag jc-q1">Q1 Journal</span><span>6 journals</span>
+                    <span class="jc-tag jc-q2">Q2 Journal</span><span>3 journals</span>
+                    <span class="jc-tag jc-c">Conference</span><span>59 conferences</span>
+                    <span class="jc-sum"><b>70</b> journal reviews &middot; <b>299</b> conference reviews</span>
+                </div>
                 <div class="top-journals">
-                    <div class="journal-card">
+                    <div class="journal-card jc-journal" data-type="journal">
                         <span class="count">47</span>
                         <h4>International Journal of Systems Assurance Engineering and Management</h4>
+                        <span class="jc-tag jc-q2">Q2 Journal</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">31</span>
                         <h4>International Conference on Computational Intelligence and Soft Computing</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">19</span>
                         <h4>International Conference on Artificial Intelligence, Computation, Communication and Network Security</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">18</span>
                         <h4>International Conference on Computer and Applications</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">16</span>
                         <h4>Engineering Data Analytics and Management Conference (EAMCON)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">14</span>
                         <h4>IEEE Consumer Communications and Networking Conference</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">13</span>
                         <h4>Beyond Technology Summit on Informatics International Conference</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">11</span>
                         <h4>International Conference on Computational Intelligence and Data Communication</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card" style="border-left: 3px solid #2563eb;">
+                    <div class="journal-card jc-journal" data-type="journal">
                         <span class="count">9</span>
-                        <h4>Scientific Reports &nbsp;<span style="font-size:0.72em; background:#2563eb; color:#fff; border-radius:4px; padding:2px 7px; font-weight:700; letter-spacing:0.04em; vertical-align:middle;">Q1 Journal</span></h4>
+                        <h4>Scientific Reports</h4>
+                        <span class="jc-tag jc-q1">Q1 Journal</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">8</span>
                         <h4>International Conference on Data Intelligence and Smart Communication</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">7</span>
                         <h4>Innovations in Machine, Engineering, and Digital Conference (IMED)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">7</span>
                         <h4>International Seminar on Research of Information Technology and Intelligent Systems (ISRITI)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">6</span>
                         <h4>International Conference on Advanced Computing and Applications</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">6</span>
                         <h4>International Conference on Network, Multimedia and Information Technology (NMITCON)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">6</span>
                         <h4>International Conference on Speech &amp; Language Technology for Low-resource Languages</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">5</span>
                         <h4>IEEE International Systems Conference (SysCon)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-journal" data-type="journal">
                         <span class="count">5</span>
                         <h4>IEEE Transactions on Dependable and Secure Computing</h4>
+                        <span class="jc-tag jc-q1">Q1 Journal</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">5</span>
                         <h4>IEEE World Conference on Applied Intelligence and Computing (AIC)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">5</span>
                         <h4>International Conference of Artificial Intelligence, Blockchain, Cloud Computing, and Data Analytics</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">5</span>
                         <h4>International Conference on Artificial Intelligence, Systems, and Emerging Technologies</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">5</span>
                         <h4>International Conference on Computing and Machine Intelligence (ICMI)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">5</span>
                         <h4>International Conference on Emerging Technologies &amp; Future Innovations (ETFI)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">5</span>
                         <h4>International Conference on Emerging Technologies in Electronics and Green Energy</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">5</span>
                         <h4>International Conference on Innovation and Intelligence for Informatics, Computing, and Technologies</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">5</span>
                         <h4>International Conference on Sustainable Computing and Intelligent Systems (SCIS)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">5</span>
                         <h4>International Conference on Sustainable and Innovative Solutions for Current Challenges in Engineering &amp; Technology</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">4</span>
                         <h4>Conference on Fundamental and Applied IT Research</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">4</span>
                         <h4>IEEE Delhi Section Conference (DELCON)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">4</span>
                         <h4>IEEE International Conference on Artificial Intelligence, Blockchain, and Internet of Things</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">4</span>
                         <h4>IEEE International Conference on Contemporary Computing and Communications (InC4)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">4</span>
                         <h4>IEEE International Conference on Teaching, Assessment, and Learning for Engineering</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">4</span>
                         <h4>International Conference of Frontiers of Engineering and Emerging Technologies (FET)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">4</span>
                         <h4>International Conference on Advances in Distributed Computing and Machine Learning</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">4</span>
                         <h4>International Conference on Computational Intelligence and Communication Networks (CICN)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">4</span>
                         <h4>International Conference on Computing, Communication, Control and Cyber-Physical Systems</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">4</span>
                         <h4>International Conference on Intelligent Computing, Communication Technology and Management</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">3</span>
                         <h4>IEEE Conference on Technologies for Sustainability (SusTech)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">3</span>
                         <h4>IEEE International Conference on Future Machine Learning and Data Science</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">3</span>
                         <h4>IEEE Pune Section International Conference (PuneCon)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">3</span>
                         <h4>Ieee International Conference on Smart Mobility (icsm)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">3</span>
                         <h4>International Conference on Emerging Trends in Networks and Computer Communications (ETNCC)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">3</span>
                         <h4>International Conference on Man Machine Systems (ICoMMS)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">3</span>
                         <h4>International Conference on Signal Processing, Computation, Electronics, Power and Telecommunication</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">3</span>
                         <h4>International Conference on Soft Computing in Data Science</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-journal" data-type="journal">
                         <span class="count">3</span>
                         <h4>MethodsX</h4>
+                        <span class="jc-tag jc-q2">Q2 Journal</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-journal" data-type="journal">
                         <span class="count">2</span>
                         <h4>Array</h4>
+                        <span class="jc-tag jc-q1">Q1 Journal</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">2</span>
                         <h4>IEEE International Conference on Technology Management, Operations and Decisions</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">2</span>
                         <h4>IEEE International Symposium on Embedded Multicore/Many-core Systems-on-Chip</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">2</span>
                         <h4>IEEE Madhya Pradesh Section Conference</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">2</span>
                         <h4>International Conference on Advances in Information Communication Technology &amp; Computing</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">2</span>
                         <h4>International Conference on Electrical, Computer and Energy Technologies</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-journal" data-type="journal">
                         <span class="count">1</span>
                         <h4>Blockchain: Research and Applications</h4>
+                        <span class="jc-tag jc-q1">Q1 Journal</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-journal" data-type="journal">
                         <span class="count">1</span>
                         <h4>Computer Methods and Programs in Biomedicine Update</h4>
+                        <span class="jc-tag jc-q1">Q1 Journal</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-journal" data-type="journal">
                         <span class="count">1</span>
                         <h4>Engineering, Technology &amp; Applied Science Research</h4>
+                        <span class="jc-tag jc-q2">Q2 Journal</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">1</span>
                         <h4>Forum for Information Retrieval Evaluation</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-journal" data-type="journal">
                         <span class="count">1</span>
                         <h4>High-Confidence Computing</h4>
+                        <span class="jc-tag jc-q1">Q1 Journal</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">1</span>
                         <h4>IEEE International Conference on Emerging Trends in Engineering and Computing</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">1</span>
                         <h4>IEEE International Conference on Interdisciplinary Approaches in Technology and Management for Social Innovation</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">1</span>
                         <h4>IEEE SYSTEMS AND INFORMATION ENGINEERING DESIGN SYMPOSIUM (SIEDS)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">1</span>
                         <h4>International Conference on Artificial Intelligence and Knowledge Processing</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">1</span>
                         <h4>International Conference on Artificial Intelligence in Healthcare</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">1</span>
                         <h4>International Conference on Augmented Reality, Intelligent Systems, and Industrial Automation</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">1</span>
                         <h4>International Conference on Data Science and Applications</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">1</span>
                         <h4>International Conference on Intelligent Computing and Advanced Communication Systems</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">1</span>
                         <h4>International Conference on Intelligent Systems and Pattern Recognition (ISPR)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">1</span>
                         <h4>International Conference on Microelectronics (IEEE ICM)</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">1</span>
                         <h4>International Conference on Smart Mobility Systems</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
-                    <div class="journal-card">
+                    <div class="journal-card jc-conf" data-type="conference">
                         <span class="count">1</span>
                         <h4>International Conference on Software, Systems and Information Technology</h4>
+                        <span class="jc-tag jc-c">Conference</span>
                     </div>
                 </div>
             </div>
