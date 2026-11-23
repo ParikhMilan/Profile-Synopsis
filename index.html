@@ -691,6 +691,15 @@
                 grid-template-columns: 1fr;
             }
         }
+        .pub-top { display:flex; justify-content:space-between; align-items:center; margin-bottom:10px; }
+        .pub-kind { font-size:0.7rem; font-weight:700; letter-spacing:0.05em; text-transform:uppercase; padding:2px 8px; border-radius:4px; background:#ede9fe; color:#5b21b6; }
+        .pub-year { font-size:0.85rem; font-weight:700; color:var(--accent-number); }
+        .award-card p.pub-authors { font-style:normal; font-size:0.82em; margin-bottom:8px; }
+        .award-card p.pub-authors strong { color:var(--text-primary); }
+        .award-card p.pub-venue { font-size:0.85em; margin-bottom:8px; }
+        .award-card p.pub-cites { font-style:normal; font-weight:700; color:var(--accent-number); margin-bottom:8px; }
+        [data-theme="dark"] .pub-kind { background:#3b0764; color:#d8b4fe; }
+        .pub-card.pub-hidden { display:none !important; }
     </style>
 </head>
 <body>
@@ -737,7 +746,7 @@
                 <div class="nav-card" onclick="showPage('memberships')">
                     <h3>Professional Memberships</h3>
                     <p>Leadership in key organizations</p>
-                    <span class="count">6 Memberships</span>
+                    <span class="count">7 Memberships</span>
                 </div>
 
                 <div class="nav-card" onclick="showPage('judging')">
@@ -749,13 +758,13 @@
                 <div class="nav-card" onclick="showPage('peer-review')">
                     <h3>Peer Review Activities</h3>
                     <p>Global contributions across 8 countries</p>
-                    <span class="count">250 Reviews</span>
+                    <span class="count">369 Reviews</span>
                 </div>
 
                 <div class="nav-card" onclick="showPage('publications')">
                     <h3>Scholarly Publications</h3>
                     <p>Research papers and articles</p>
-                    <span class="count">26 Publications</span>
+                    <span class="count">48 Publications</span>
                 </div>
 
                 <div class="nav-card" onclick="showPage('media')">
@@ -785,12 +794,12 @@
                 
                 <div class="stats">
                     <div class="stat-card">
-                        <div class="number">250</div>
+                        <div class="number">369</div>
                         <div class="label">Total Reviews</div>
                     </div>
                     <div class="stat-card">
-                        <div class="number">30+</div>
-                        <div class="label">Conferences & Journals</div>
+                        <div class="number">68</div>
+                        <div class="label">Conferences &amp; Journals</div>
                     </div>
                     <div class="stat-card">
                         <div class="number">8</div>
@@ -800,44 +809,51 @@
 
                 <div id="map"></div>
 
-                <h3 style="color: var(--text-primary); margin-bottom: 24px; font-size: 1.8em;">Top Conferences & Journals</h3>
+                <h3 style="color: var(--text-primary); margin-bottom: 24px; font-size: 1.8em;">Verified Reviews by Conference &amp; Journal</h3>
                 <div class="top-journals">
-
                     <div class="journal-card">
-                        <span class="count">29</span>
+                        <span class="count">47</span>
                         <h4>International Journal of Systems Assurance Engineering and Management</h4>
                     </div>
                     <div class="journal-card">
-                        <span class="count">25</span>
+                        <span class="count">31</span>
                         <h4>International Conference on Computational Intelligence and Soft Computing</h4>
                     </div>
                     <div class="journal-card">
-                        <span class="count">18</span>
+                        <span class="count">19</span>
                         <h4>International Conference on Artificial Intelligence, Computation, Communication and Network Security</h4>
                     </div>
                     <div class="journal-card">
-                        <span class="count">15</span>
+                        <span class="count">18</span>
                         <h4>International Conference on Computer and Applications</h4>
                     </div>
                     <div class="journal-card">
-                        <span class="count">10</span>
-                        <h4>Beyond Technology Summit on Informatics International Conference</h4>
-                    </div>
-                    <div class="journal-card">
-                        <span class="count">8</span>
+                        <span class="count">16</span>
                         <h4>Engineering Data Analytics and Management Conference (EAMCON)</h4>
                     </div>
                     <div class="journal-card">
-                        <span class="count">8</span>
+                        <span class="count">14</span>
                         <h4>IEEE Consumer Communications and Networking Conference</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">13</span>
+                        <h4>Beyond Technology Summit on Informatics International Conference</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">11</span>
+                        <h4>International Conference on Computational Intelligence and Data Communication</h4>
+                    </div>
+                    <div class="journal-card" style="border-left: 3px solid #2563eb;">
+                        <span class="count">9</span>
+                        <h4>Scientific Reports &nbsp;<span style="font-size:0.72em; background:#2563eb; color:#fff; border-radius:4px; padding:2px 7px; font-weight:700; letter-spacing:0.04em; vertical-align:middle;">Q1 Journal</span></h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">8</span>
+                        <h4>International Conference on Data Intelligence and Smart Communication</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">7</span>
                         <h4>Innovations in Machine, Engineering, and Digital Conference (IMED)</h4>
-                    </div>
-                    <div class="journal-card">
-                        <span class="count">7</span>
-                        <h4>International Conference on Computational Intelligence and Data Communication</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">7</span>
@@ -852,8 +868,16 @@
                         <h4>International Conference on Network, Multimedia and Information Technology (NMITCON)</h4>
                     </div>
                     <div class="journal-card">
+                        <span class="count">6</span>
+                        <h4>International Conference on Speech &amp; Language Technology for Low-resource Languages</h4>
+                    </div>
+                    <div class="journal-card">
                         <span class="count">5</span>
                         <h4>IEEE International Systems Conference (SysCon)</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">5</span>
+                        <h4>IEEE Transactions on Dependable and Secure Computing</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">5</span>
@@ -873,7 +897,7 @@
                     </div>
                     <div class="journal-card">
                         <span class="count">5</span>
-                        <h4>International Conference on Emerging Technologies & Future Innovations (ETFI)</h4>
+                        <h4>International Conference on Emerging Technologies &amp; Future Innovations (ETFI)</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">5</span>
@@ -885,11 +909,15 @@
                     </div>
                     <div class="journal-card">
                         <span class="count">5</span>
-                        <h4>International Conference on Sustainable and Innovative Solutions for Current Challenges in Engineering & Technology</h4>
+                        <h4>International Conference on Sustainable Computing and Intelligent Systems (SCIS)</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">5</span>
-                        <h4>International Conference on Sustainable Computing and Intelligent Systems (SCIS)</h4>
+                        <h4>International Conference on Sustainable and Innovative Solutions for Current Challenges in Engineering &amp; Technology</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">4</span>
+                        <h4>Conference on Fundamental and Applied IT Research</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">4</span>
@@ -897,7 +925,23 @@
                     </div>
                     <div class="journal-card">
                         <span class="count">4</span>
+                        <h4>IEEE International Conference on Artificial Intelligence, Blockchain, and Internet of Things</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">4</span>
+                        <h4>IEEE International Conference on Contemporary Computing and Communications (InC4)</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">4</span>
+                        <h4>IEEE International Conference on Teaching, Assessment, and Learning for Engineering</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">4</span>
                         <h4>International Conference of Frontiers of Engineering and Emerging Technologies (FET)</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">4</span>
+                        <h4>International Conference on Advances in Distributed Computing and Machine Learning</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">4</span>
@@ -908,12 +952,28 @@
                         <h4>International Conference on Computing, Communication, Control and Cyber-Physical Systems</h4>
                     </div>
                     <div class="journal-card">
+                        <span class="count">4</span>
+                        <h4>International Conference on Intelligent Computing, Communication Technology and Management</h4>
+                    </div>
+                    <div class="journal-card">
                         <span class="count">3</span>
                         <h4>IEEE Conference on Technologies for Sustainability (SusTech)</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">3</span>
+                        <h4>IEEE International Conference on Future Machine Learning and Data Science</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">3</span>
                         <h4>IEEE Pune Section International Conference (PuneCon)</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">3</span>
+                        <h4>Ieee International Conference on Smart Mobility (icsm)</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">3</span>
+                        <h4>International Conference on Emerging Trends in Networks and Computer Communications (ETNCC)</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">3</span>
@@ -927,13 +987,13 @@
                         <span class="count">3</span>
                         <h4>International Conference on Soft Computing in Data Science</h4>
                     </div>
-                    <div class="journal-card" style="border-left: 3px solid #2563eb;">
-                        <span class="count">3</span>
-                        <h4>Scientific Reports &nbsp;<span style="font-size:0.72em; background:#2563eb; color:#fff; border-radius:4px; padding:2px 7px; font-weight:700; letter-spacing:0.04em; vertical-align:middle;">Q1 Journal</span></h4>
-                    </div>
                     <div class="journal-card">
                         <span class="count">3</span>
                         <h4>MethodsX</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">2</span>
+                        <h4>Array</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">2</span>
@@ -941,23 +1001,43 @@
                     </div>
                     <div class="journal-card">
                         <span class="count">2</span>
+                        <h4>IEEE International Symposium on Embedded Multicore/Many-core Systems-on-Chip</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">2</span>
                         <h4>IEEE Madhya Pradesh Section Conference</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">2</span>
-                        <h4>International Conference on Advances in Information Communication Technology & Computing</h4>
+                        <h4>International Conference on Advances in Information Communication Technology &amp; Computing</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">2</span>
                         <h4>International Conference on Electrical, Computer and Energy Technologies</h4>
                     </div>
                     <div class="journal-card">
-                        <span class="count">2</span>
-                        <h4>International Conference on Speech & Language Technology for Low-resource Languages</h4>
+                        <span class="count">1</span>
+                        <h4>Blockchain: Research and Applications</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">1</span>
+                        <h4>Computer Methods and Programs in Biomedicine Update</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">1</span>
+                        <h4>Engineering, Technology &amp; Applied Science Research</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">1</span>
                         <h4>Forum for Information Retrieval Evaluation</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">1</span>
+                        <h4>High-Confidence Computing</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">1</span>
+                        <h4>IEEE International Conference on Emerging Trends in Engineering and Computing</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">1</span>
@@ -967,8 +1047,37 @@
                         <span class="count">1</span>
                         <h4>IEEE SYSTEMS AND INFORMATION ENGINEERING DESIGN SYMPOSIUM (SIEDS)</h4>
                     </div>
+                    <div class="journal-card">
+                        <span class="count">1</span>
+                        <h4>International Conference on Artificial Intelligence and Knowledge Processing</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">1</span>
+                        <h4>International Conference on Artificial Intelligence in Healthcare</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">1</span>
+                        <h4>International Conference on Augmented Reality, Intelligent Systems, and Industrial Automation</h4>
+                    </div>
+                    <div class="journal-card">
                         <span class="count">1</span>
                         <h4>International Conference on Data Science and Applications</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">1</span>
+                        <h4>International Conference on Intelligent Computing and Advanced Communication Systems</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">1</span>
+                        <h4>International Conference on Intelligent Systems and Pattern Recognition (ISPR)</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">1</span>
+                        <h4>International Conference on Microelectronics (IEEE ICM)</h4>
+                    </div>
+                    <div class="journal-card">
+                        <span class="count">1</span>
+                        <h4>International Conference on Smart Mobility Systems</h4>
                     </div>
                     <div class="journal-card">
                         <span class="count">1</span>
@@ -1280,7 +1389,7 @@
 
                     <div class="award-card">
                         <h4>Web of Science</h4>
-                        <p>ResearcherID: NHP-2260-2025 • 250 Verified Peer Reviews • 10 Total Documents • 6 Publications Indexed in Web of Science</p>
+                        <p>ResearcherID: NHP-2260-2025 • 369 Verified Peer Reviews • 10 Total Documents • 6 Publications Indexed in Web of Science</p>
                         <a href="https://www.webofscience.com/wos/author/record/NHP-2260-2025" target="_blank" class="view-link">View Profile →</a>
                     </div>
 
@@ -1488,19 +1597,9 @@
                 
                 <div id="membershipsList" class="award-cards">
                     <div class="award-card">
-                        <h4>Senior IEEE</h4>
-                        <p>Taking part as reviewer, TPC, AAO Panel, Session Chair</p>
-                        <p style="margin-top: 12px; font-style: normal; color: var(--text-secondary);">IEEE is the world's largest technical professional organization with over 400,000 members in 160+ countries</p>
-                    </div>
-                    <div class="award-card">
-                        <h4>DisF SCRS</h4>
-                        <p>Conference Chair, Accessor, Advisory Board member, TPC Reviewer</p>
-                        <p style="margin-top: 12px; font-style: normal; color: var(--text-secondary);">Distinguished Fellow of Society for Cybernetics and Research Systems</p>
-                    </div>
-                    <div class="award-card">
-                        <h4>Fellow IETE</h4>
-                        <p>Chapter Member</p>
-                        <p style="margin-top: 12px; font-style: normal; color: var(--text-secondary);">Institution of Electronics and Telecommunication Engineers</p>
+                        <h4>Fellow IET (FIET)</h4>
+                        <p>Elected Fellow of the Institution of Engineering and Technology. Fellowship is the highest grade of IET membership, awarded to engineers who show leadership and significant contribution to the profession</p>
+                        <p style="margin-top: 12px; font-style: normal; color: var(--text-secondary);">The Institution of Engineering and Technology - United Kingdom, Royal Charter professional engineering institution with members across the world</p>
                     </div>
                     <div class="award-card">
                         <h4>Fellow BCS</h4>
@@ -1509,15 +1608,30 @@
                         <p style="margin-top: 12px; font-style: normal; color: var(--text-secondary);">British Computer Society - The Chartered Institute for IT, the leading body for computing professionals in the UK</p>
                     </div>
                     <div class="award-card">
+                        <h4>DisF SCRS</h4>
+                        <p>Conference Chair, Accessor, Advisory Board member, TPC Reviewer</p>
+                        <p style="margin-top: 12px; font-style: normal; color: var(--text-secondary);">Distinguished Fellow of Society for Cybernetics and Research Systems</p>
+                    </div>
+                    <div class="award-card">
                         <h4>Associate Member – Sigma Xi, The Scientific Research Honor Society</h4>
                         <p>Duly elected Associate Member by the Committee on Qualifications and Membership in 2025. Sigma Xi is one of the world's largest multidisciplinary research societies, dedicated to the promotion of science and engineering</p>
                         <p style="margin-top: 12px; font-style: normal; color: var(--text-secondary);">Sigma Xi · USA · 2025 · Signed by President Daniel Rubenstein Ph.D. and Executive Director Jamie Vernon Ph.D.</p>
+                    </div>
+                    <div class="award-card">
+                        <h4>Fellow IETE</h4>
+                        <p>Chapter Member</p>
+                        <p style="margin-top: 12px; font-style: normal; color: var(--text-secondary);">Institution of Electronics and Telecommunication Engineers</p>
                     </div>
                     <div class="award-card">
                         <h4>Member – International Association of Engineers (IAENG)</h4>
                         <p>Member #532570 since September 10, 2025. IAENG is a non-profit international association for engineers and computer scientists, founded by members from over 30 countries</p>
                         <p style="margin-top: 12px; font-style: normal; color: var(--text-secondary);">IAENG · Hong Kong · Since September 2025</p>
                         <a href="http://www.iaeng.org/membership.html" target="_blank" class="view-link">View Membership →</a>
+                    </div>
+                    <div class="award-card">
+                        <h4>Senior IEEE</h4>
+                        <p>Taking part as reviewer, TPC, AAO Panel, Session Chair</p>
+                        <p style="margin-top: 12px; font-style: normal; color: var(--text-secondary);">IEEE is the world's largest technical professional organization with over 400,000 members in 160+ countries</p>
                     </div>
                 </div>
             </div>
@@ -1728,15 +1842,11 @@
                     </div>
 
                     <div class="award-card" onclick="showPage('peer-review')" style="cursor: pointer;">
-                        <h4>Peer Review – 250 Papers</h4>
-                        <p>Evaluated 250 research papers across 30+ international conferences and journals including IEEE and Springer</p>
+                        <h4>Peer Review – 369 Papers</h4>
+                        <p>Evaluated 369 research papers across 68 international conferences and journals including IEEE and Springer</p>
                         <a onclick="event.stopPropagation(); showPage('peer-review');" class="view-link" style="cursor: pointer;">View Details →</a>
                     </div>
 
-                </div>
-                        <p>Evaluating business intelligence solutions for industry recognition programs</p>
-                        <p style="margin-top: 8px; font-style: normal; color: var(--accent-secondary);">Ongoing</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -1745,157 +1855,398 @@
             <div class="section">
                 <button class="back-button" onclick="showPage('home')">← Back to Home</button>
                 <h2>Scholarly Publications</h2>
-                
-                <input type="text" class="search-box" id="publicationsSearch" placeholder="Search publications...">
-                
+
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="number">48</div>
+                        <div class="label">Total Publications</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">42</div>
+                        <div class="label">Indexed in IEEE Xplore</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="number">155</div>
+                        <div class="label">Google Scholar Citations</div>
+                    </div>
+                </div>
+
+                <div style="display:flex; flex-wrap:wrap; gap:8px; margin-bottom:20px;"><button class="tl-filter pub-filter active" data-f="all">All</button><button class="tl-filter pub-filter" data-f="y2026">2026</button><button class="tl-filter pub-filter" data-f="y2025">2025</button><button class="tl-filter pub-filter" data-f="y2020">2020</button><button class="tl-filter pub-filter" data-f="kIEEE Conference">IEEE Conference</button><button class="tl-filter pub-filter" data-f="kIEEE Journal">IEEE Journal</button><button class="tl-filter pub-filter" data-f="kSpringer Conference">Springer Conference</button><button class="tl-filter pub-filter" data-f="kJournal">Journal</button><button class="tl-filter pub-filter" data-f="kPreprint">Preprint</button><button class="tl-filter pub-filter" data-f="kPatent">Patent</button><button class="tl-filter pub-filter" data-f="kBook">Book</button><button class="tl-filter pub-filter" data-f="kArticle">Article</button></div>
+
+                <input type="text" class="search-box" id="publicationsSearch" placeholder="Search by title, co-author, or venue...">
+
                 <div id="publicationsList" class="award-cards">
-
-                    <div class="award-card">
-                        <h4>Multi-Layered Security Architecture for Cloud-Native Databases: Design Patterns and Implementation</h4>
-                        <p>SoutheastCon 2026 • IEEE • February–March 2026</p>
-                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Validated on Oracle Autonomous Database managing 50,000+ production databases; security layers impose 8-10% overhead while maintaining 99.99% availability</p>
-                        <a href="https://ieeexplore.ieee.org/document/11476097" target="_blank" class="view-link">View on IEEE Xplore →</a>
-                    </div>
-
-                    <div class="award-card">
-                        <h4>ContextCheck: A Self-Consistency Framework for Hallucination Detection in Retrieval-Augmented Generation Systems</h4>
-                        <p>2026 International Seminar on Intelligent Business and Edge-Computing Research (ISIBER) • IEEE • February 2026</p>
-                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Training-free RAG hallucination detection; F1=0.81, precision=0.84, recall=0.78 on NaturalQuestions benchmark; outperforms baseline methods</p>
-                        <a href="https://ieeexplore.ieee.org/document/11470068" target="_blank" class="view-link">View on IEEE Xplore →</a>
-                    </div>
-
-                    <div class="award-card">
-                        <h4>Self-Healing AI Systems Using Multi-Agent Learning</h4>
-                        <p>2026 International Seminar on Intelligent Business and Edge-Computing Research (ISIBER) • IEEE • February 2026</p>
-                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Autonomous self-healing framework reducing recovery time by 47% and improving availability by 32% over rule-based and single-agent baselines</p>
-                        <a href="https://ieeexplore.ieee.org/document/11470173" target="_blank" class="view-link">View on IEEE Xplore →</a>
-                    </div>
-
-                    <div class="award-card">
-                        <h4>Metaheuristic-Enabled AI Modernization for Performance and Resource Efficiency</h4>
-                        <p>2nd International Conference on Information Technology and Artificial Intelligence (ITAI 2026) • Lasell University, Newton, Massachusetts, USA • Springer • 2026</p>
-                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Co-authored with Rakesh Kumar Mali and Aniket Abhishek Soni. Certificate of Presentation issued by Lasell University. March 21-22, 2026</p>
-                    </div>
-
-                    <div class="award-card">
-                        <h4>AdaptIndex: Adaptive Index Selection for IoT Vector Databases</h4>
-                        <p>2026 14th International Symposium on Digital Forensics and Security (ISDFS) • IEEE • 2026</p>
-                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">ML system for autonomous index selection achieving 89% prediction accuracy; validated across 47 edge gateways with 29% P95 latency reduction</p>
-                        <a href="https://ieeexplore.ieee.org/document/11459065" target="_blank" class="view-link">View on IEEE Xplore →</a>
-                    </div>
-
-                    <div class="award-card">
-                        <h4>Distributed Adaptive Speculative Decoding: Accelerating LLM Inference With Context-Aware Draft Selection</h4>
-                        <p>2026 14th International Symposium on Digital Forensics and Security (ISDFS) • IEEE • 2026</p>
-                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Novel framework achieving 2.6–2.8x speedup over standard autoregressive decoding; 42% end-to-end latency reduction in multi-GPU settings</p>
-                        <a href="https://ieeexplore.ieee.org/document/11459120" target="_blank" class="view-link">View on IEEE Xplore →</a>
-                    </div>
-
-                    <div class="award-card">
-                        <h4>TrustGraph: Federated Graph Neural Networks for Cross-Platform Trust and Fraud Propagation Analysis</h4>
-                        <p>2026 IEEE 5th International Conference on AI in Cybersecurity (ICAIC) • IEEE • 2026</p>
-                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Privacy-preserving federated GNN framework achieving 0.93 AUC for cross-platform fraud detection without raw data sharing</p>
-                        <a href="https://ieeexplore.ieee.org/document/11395695" target="_blank" class="view-link">View on IEEE Xplore →</a>
-                    </div>
-
-                    <div class="award-card">
-                        <h4>FraudSentinel: Federated Multi-Agent Reinforcement Learning for Privacy-Preserving Cross-Marketplace Fraud Detection</h4>
-                        <p>2026 IEEE 5th International Conference on AI in Cybersecurity (ICAIC) • IEEE • 2026</p>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>FraudSentinel: Federated Multi-Agent Reinforcement Learning for Privacy-Preserving Cross-Marketplace Fraud Detection in Distributed E-Commerce Ecosystems</h4>
+                        <p class="pub-authors">T. P. Patel, C. Kulkarni, D. Kole, <strong>M. Parikh</strong>, R. Keshava, R. Purushothaman</p>
+                        <p class="pub-venue">2026 IEEE 5th International Conference on AI in Cybersecurity (ICAIC)</p>
                         <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">96.8% fraud detection accuracy with formal differential privacy guarantees; evaluated on 590K real-world e-commerce transactions</p>
+                        <p class="pub-cites">20 citations</p>
                         <a href="https://ieeexplore.ieee.org/document/11395673" target="_blank" class="view-link">View on IEEE Xplore →</a>
                     </div>
-
-                    <div class="award-card">
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>TrustGraph: Federated Graph Neural Networks for Cross-Platform Trust and Fraud Propagation Analysis</h4>
+                        <p class="pub-authors">T. P. Patel, A. Kumar, M. Kumari, R. Purushothaman, R. Keshava, <strong>M. Parikh</strong></p>
+                        <p class="pub-venue">2026 IEEE 5th International Conference on AI in Cybersecurity (ICAIC)</p>
+                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Privacy-preserving federated GNN framework achieving 0.93 AUC for cross-platform fraud detection without raw data sharing</p>
+                        <p class="pub-cites">18 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11395695" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Distributed Adaptive Speculative Decoding: Accelerating Large Language Model Inference With Context-Aware Draft Selection</h4>
+                        <p class="pub-authors">T. P. Patel, V. R. Soni, A. K. Padhy, S. R. K. V. Bayyavarapu, <strong>M. Parikh</strong></p>
+                        <p class="pub-venue">2026 14th International Symposium on Digital Forensics and Security (ISDFS)</p>
+                        <p class="pub-cites">8 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11459120" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Journal">
+                        <div class="pub-top"><span class="pub-kind">IEEE Journal</span><span class="pub-year">2026</span></div>
+                        <h4>A Hybrid Edge Cloud Predictive Framework for Smart Home Energy Management in Consumer Electronics Using Distilled-Tree and Gradient Boosting Models</h4>
+                        <p class="pub-authors">R. K. Dhanaraj, M. Muthusamy, A. Sureshkumar, R. Keshava, <strong>M. Parikh</strong>, P. Shanmugam, D. Pamucar</p>
+                        <p class="pub-venue">IEEE Transactions on Consumer Electronics</p>
+                        <p class="pub-cites">7 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11300847" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Self-Healing AI Systems Using Multi-Agent Learning</h4>
+                        <p class="pub-authors">T. P. Patel, A. K. Elengovan, V. Ranganathan, <strong>M. Parikh</strong>, D. Kole</p>
+                        <p class="pub-venue">2026 International Seminar on Intelligent Business and Edge-Computing Research (ISIBER)</p>
+                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Autonomous self-healing framework reducing recovery time by 47% and improving availability by 32% over rule-based and single-agent baselines</p>
+                        <p class="pub-cites">7 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11470173" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="Preprint">
+                        <div class="pub-top"><span class="pub-kind">Preprint</span><span class="pub-year">2026</span></div>
+                        <h4>Big Data Workload Profiling for Energy-Aware Cloud Resource Management</h4>
+                        <p class="pub-authors"><strong>M Parikh</strong>, AA Soni, SM Shah, AR Jha</p>
+                        <p class="pub-venue">arXiv preprint arXiv:2601.11935</p>
+                        <p class="pub-cites">5 citations</p>
+                        <a href="https://arxiv.org/abs/2601.11935" target="_blank" class="view-link">View on arXiv →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>AdaptIndex: Adaptive Index Selection for IoT Vector Databases</h4>
+                        <p class="pub-authors">C. Medicherla, C. Kulkarni, V. Ranganathan, <strong>M. Parikh</strong>, V. Soni</p>
+                        <p class="pub-venue">2026 14th International Symposium on Digital Forensics and Security (ISDFS)</p>
+                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">ML system for autonomous index selection achieving 89% prediction accuracy; validated across 47 edge gateways with 29% P95 latency reduction</p>
+                        <p class="pub-cites">4 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11459065" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>ContextCheck: A Self-Consistency Framework for Hallucination Detection in Retrieval-Augmented Generation Systems</h4>
+                        <p class="pub-authors">C. Medicherla, C. Kulkarni, T. P. Patel, S. Shivam, V. Nutalapati, <strong>M. Parikh</strong>, M. Kumari, A. K. Elengovan</p>
+                        <p class="pub-venue">2026 International Seminar on Intelligent Business and Edge-Computing Research (ISIBER)</p>
+                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Training-free RAG hallucination detection; F1=0.81, precision=0.84, recall=0.78 on NaturalQuestions benchmark; outperforms baseline methods</p>
+                        <p class="pub-cites">4 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11470068" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Multi-Layered Security Architecture for Cloudnative Databases- Design Patterns and Implementation</h4>
+                        <p class="pub-authors">C. Kulkarni, C. Medicherla, B. Vulugundam, T. P. Patel, <strong>M. Parikh</strong>, S. R. K. V. Bayyavarapu</p>
+                        <p class="pub-venue">SoutheastCon 2026</p>
+                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Validated on Oracle Autonomous Database managing 50,000+ production databases; security layers impose 8-10% overhead while maintaining 99.99% availability</p>
+                        <p class="pub-cites">4 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11476097" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Native MCP Server in Oracle Autonomous AI Database-Enabling High Performance Agentic AI Workloads</h4>
+                        <p class="pub-authors">C. Kulkarni, C. Medicherla, T. P. Patel, B. Vulugundam, R. Purushothaman, I. Sahoo, <strong>M. Parikh</strong>, R. Keshava</p>
+                        <p class="pub-venue">2026 International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET)</p>
+                        <p class="pub-cites">3 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11541769" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>A Production Framework for Adaptive GPU Resource Management in Deep Learning Inference</h4>
+                        <p class="pub-authors">T. P. Patel, R. Nimmala, <strong>M. Parikh</strong></p>
+                        <p class="pub-venue">2026 IEEE 5th International Multidisciplinary Conference on Engineering Technology (IMCET)</p>
+                        <p class="pub-cites">1 citation</p>
+                        <a href="https://ieeexplore.ieee.org/document/11503768" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Performance Analysis of AI-Powered Analytics in Oracle Autonomous AI Lakehouse-Vector Search and Data Lake Acceleration on Apache Iceberg</h4>
+                        <p class="pub-authors">C. Kulkarni, C. Medicherla, T. P. Patel, B. Vulugundam, R. Purushothaman, I. Sahoo, <strong>M. Parikh</strong>, R. Keshava</p>
+                        <p class="pub-venue">2026 International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET)</p>
+                        <p class="pub-cites">1 citation</p>
+                        <a href="https://ieeexplore.ieee.org/document/11541821" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Risk-Aware Human-AI Collaboration Framework for High-Stakes Decision Systems</h4>
+                        <p class="pub-authors">T. P. Patel, M. Kumari, <strong>M. Parikh</strong></p>
+                        <p class="pub-venue">2026 International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET)</p>
+                        <p class="pub-cites">1 citation</p>
+                        <a href="https://ieeexplore.ieee.org/document/11541740" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>A TinyML-Based Out-of-Distribution Security Monitor for Energy-Constrained Industrial and Medical IoT Systems</h4>
+                        <p class="pub-authors">V. Ranganathan, A. K. Elengovan, V. Nutalapati, D. Kole, <strong>M. Parikh</strong>, N. Seshagiri</p>
+                        <p class="pub-venue">2026 International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11541968" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>AI-Powered Fraud Analytics: Detecting Financial and Operational Irregularities in Supply Chain Networks</h4>
+                        <p class="pub-authors">P. Sundaramoorthy, P. Challa, <strong>M. Parikh</strong>, V. K. Venkataswamy, S. Jha</p>
+                        <p class="pub-venue">2026 International Conference on Innovative Computing, Intelligent Communication and Smart Electrical Systems (ICSES)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11479031" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Architecting Multi-Model Agentic AI Systems: A Taxonomy and Reference Architecture for Specialized LLMs in Production Agents</h4>
+                        <p class="pub-authors">S. Shivam, <strong>M. Parikh</strong>, V. Nutalapati, V. Soni, V. Venganti</p>
+                        <p class="pub-venue">2026 International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11541520" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="Patent">
+                        <div class="pub-top"><span class="pub-kind">Patent</span><span class="pub-year">2026</span></div>
+                        <h4>Artificial intelligence-based adaptive big data storage and retrieval optimization method and system thereof</h4>
+                        <p class="pub-authors">RNK DHENIA, AA SONI, <strong>M PARIKH</strong>, JA SONI, NLS THATAVARTHI, ...</p>
+                        <p class="pub-venue">US Patent Application No. 19/355,795</p>
+                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IKrH0tgAAAAJ&citation_for_view=IKrH0tgAAAAJ:hqOjcs7Dif8C" target="_blank" class="view-link">View Patent Record →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Beyond NL2SQL: Integrating Model Context Protocol with Oracle Select AI for Agentic Business Intelligence on Autonomous Database</h4>
+                        <p class="pub-authors">C. Kulkarni, R. Nimmala, C. Medicherla, S. P. Nandi, <strong>M. Parikh</strong>, R. Hibane</p>
+                        <p class="pub-venue">2026 IEEE Cloud Summit</p>
+                        <a href="https://ieeexplore.ieee.org/document/11627363" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Deep Learning NER Pipeline for Automated Basel III / IFRS 9 Risk Parameter Extraction from Climate Narratives</h4>
+                        <p class="pub-authors">R. Nimmala, J. Nimmala, <strong>M. Parikh</strong></p>
+                        <p class="pub-venue">2026 International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11542084" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Distributed AI Vector Search with Data Sovereignty: Architectural Analysis and Scalability Characterization of Oracle Database Sharding</h4>
+                        <p class="pub-authors">C. Kulkarni, C. Medicherla, B. Vulugundam, S. R. K. Varma, <strong>M. Parikh</strong>, A. K. Padhy</p>
+                        <p class="pub-venue">2026 2nd International Conference on Computational Intelligence Approaches and Applications (ICCIAA)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11544020" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Energy-Aware Neural Adaptation for Sustainable AI Inference on Resource-Constrained Systems</h4>
+                        <p class="pub-authors">T. P. Patel, <strong>M. Parikh</strong>, J. Shanbhag, A. K. Padhy, V. Soni</p>
+                        <p class="pub-venue">2026 IEEE 8th International Conference on Communications, Information System and Computer Engineering (CISCE)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11504582" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Energy-Truth Intrusion Detection for IoT Cyber-Physical Systems Using Cross-Sensor Energy Consistency</h4>
+                        <p class="pub-authors">J. Shanbhag, A. K. Elengovan, V. Nutalapati, D. Kole, <strong>M. Parikh</strong>, T. P. Patel</p>
+                        <p class="pub-venue">2026 International Conference on Intelligent Systems and Artificial Intelligence Applications (ISAA)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11726659" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>GAPI: Graph-Aware Prefill Interleaving for Knowledge Graph-Augmented LLM Inference in Explainable Education Policy Analysis</h4>
+                        <p class="pub-authors"><strong>M. Parikh</strong>, R. Nimmala</p>
+                        <p class="pub-venue">2026 International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11541801" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>GPU-Accelerated Resilient Control: Experimental Validation and Performance Benchmarking for Autonomous Systems</h4>
+                        <p class="pub-authors">T. P. Patel, C. Kulkarni, R. Purushothaman, D. Kole, <strong>M. Parikh</strong>, R. Keshava</p>
+                        <p class="pub-venue">2026 International Conference on Current Research in Artificial Intelligence and Data Science (ICCRAIDS)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11519729" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Integrating Graph Neural Networks and Large Language Models for Climate Policy Shock Contagion in Bank Lending Networks</h4>
+                        <p class="pub-authors">R. Nimmala, P. Nutalapati, J. Nimmala, <strong>M. Parikh</strong>, S. R. K. V. Bayyavarapu, T. P. Patel</p>
+                        <p class="pub-venue">2026 IEEE International Conference on AI and Data Analytics (ICAD)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11609140" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Knowledge Graph-Enhanced LLMs for Unified Climate-Aware Risk Management in Banking: The Cognitive Bank Architecture</h4>
+                        <p class="pub-authors">R. Nimmala, G. B. Thokala, J. Nimmala, <strong>M. Parikh</strong></p>
+                        <p class="pub-venue">2026 International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11541423" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="Springer Conference">
+                        <div class="pub-top"><span class="pub-kind">Springer Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Metaheuristic-Enabled AI Modernization for Performance and Resource Efficiency</h4>
+                        <p class="pub-authors">R. K. Mali, A. A. Soni, <strong>M. Parikh</strong></p>
+                        <p class="pub-venue">2nd International Conference on Information Technology and Artificial Intelligence (ITAI 2026), Lasell University, Newton, MA, USA • Springer</p>
+                        <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Co-authored with Rakesh Kumar Mali and Aniket Abhishek Soni. Certificate of Presentation issued by Lasell University. March 21-22, 2026</p>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Noise-Aware Quantum Kernel-Based Streaming Anomaly Detection Under Concept Drift for Sensor Data</h4>
+                        <p class="pub-authors">R. Purushothaman, J. Shanbhag, R. Keshava, A. K. Elengovan, <strong>M. Parikh</strong></p>
+                        <p class="pub-venue">2026 International Conference on Intelligent Systems and Artificial Intelligence Applications (ISAA)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11726391" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Performance-Driven Database Distribution: Evaluating Replication, Partitioning, and Sharding for OLAP Using an Adaptive Cross-Platform Framework</h4>
+                        <p class="pub-authors">S. P. Nandi, <strong>M. Parikh</strong>, V. Ranganathan, V. Venkatesan, V. Venganti</p>
+                        <p class="pub-venue">2026 International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11542171" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="Article">
+                        <div class="pub-top"><span class="pub-kind">Article</span><span class="pub-year">2026</span></div>
+                        <h4>Security and Compliance Preservation in AI-Assisted Legacy Application Transformation.</h4>
+                        <p class="pub-authors">SR Keshireddy, D Ajay, <strong>M Parikh</strong>, S Emani</p>
+                    </div>
+                    <div class="award-card pub-card" data-year="2026" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2026</span></div>
+                        <h4>Semantic Transformer-Based Detection of Security Misconfigurations in Cloud Infrastructure-as-Code</h4>
+                        <p class="pub-authors">N. S. Praveen Kumar Yadati, S. Manohar Nethi, S. P. Nandi, R. Purushothaman, P. Nutalapati, <strong>M. Parikh</strong></p>
+                        <p class="pub-venue">2026 International Conference on Artificial Intelligence, Systems, and Emerging Technologies (ICAISET)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11541339" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
+                        <h4>Reinforcement Learning for Dynamic Workflow Optimization in CI/CD Pipelines</h4>
+                        <p class="pub-authors">A. A. Soni, <strong>M. Parikh</strong>, R. N. K. Dhenia, J. A. Soni, A. R. Jha, S. M. Shah</p>
+                        <p class="pub-venue">2025 IEEE 17th International Conference on Computational Intelligence and Communication Networks (CICN)</p>
+                        <p class="pub-cites">9 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11367872" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
+                        <h4>Deep Learning for Automated Defect Detection in Industrial Manufacturing</h4>
+                        <p class="pub-authors"><strong>M. Parikh</strong>, S. K. Ramavath, S. Prathi, K. Sheela, R. Handaragal, R. Nathiya</p>
+                        <p class="pub-venue">2025 6th International Conference on Electronics and Sustainable Communication Systems (ICESC)</p>
+                        <p class="pub-cites">8 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11212369" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
+                        <h4>Explainable AI for Autonomous Systems: A Framework for Trustworthy Decision-Making</h4>
+                        <p class="pub-authors">I. Sahoo, K. K. Ganeeb, P. Nutalapati, <strong>M. Parikh</strong>, G. A. Gajwani, R. Keshava, B. Harve</p>
+                        <p class="pub-venue">2025 10th International Conference on Computer and Communication Engineering (ICCCE)</p>
+                        <p class="pub-cites">8 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11473362" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
+                        <h4>Innovative Framework for Secure and Scalable Web and Mobile Application Development in Fintech: A User- Centric and AI - Driven Approach</h4>
+                        <p class="pub-authors">K. Jayabalan, S. Parmsivan, G. Sunkara, <strong>M. Parikh</strong>, P. Challa, V. Nutalapati</p>
+                        <p class="pub-venue">2025 5th International Conference on Ubiquitous Computing and Intelligent Information Systems (ICUIS)</p>
+                        <p class="pub-cites">8 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11380645" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
+                        <h4>Secure and Scalable Data Sharing in IoT Environments with Blockchain Integration</h4>
+                        <p class="pub-authors">B. Pothineni, D. Kole, I. Sahoo, N. Seshagiri, <strong>M. Parikh</strong>, A. Gadiparthi, B. M. Harve</p>
+                        <p class="pub-venue">2025 10th International Conference on Computer and Communication Engineering (ICCCE)</p>
+                        <p class="pub-cites">5 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11474215" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
+                        <h4>Adaptive Resource Management in Cloud-Native Databases: A Study of Autonomous Scaling and Query Optimization</h4>
+                        <p class="pub-authors">P. Sundaramoorthy, <strong>M. Parikh</strong>, S. R. Keshireddy, A. K. Penumatcha, K. Jayabalan</p>
+                        <p class="pub-venue">2025 10th International Conference on Communication and Electronics Systems (ICCES)</p>
+                        <p class="pub-cites">4 citations</p>
+                        <a href="https://ieeexplore.ieee.org/document/11336962" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2025" data-kind="Journal">
+                        <div class="pub-top"><span class="pub-kind">Journal</span><span class="pub-year">2025</span></div>
+                        <h4>Edge vs Cloud Computing for Real-Time Analytics</h4>
+                        <p class="pub-authors">AA Soni, RNK Dhenia, <strong>M Parikh</strong></p>
+                        <p class="pub-venue">International Journal of Science and Engineering Applications, 14(6), 39-45</p>
+                        <p class="pub-cites">4 citations</p>
+                    </div>
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
                         <h4>AI-Driven Cross-Domain Sentiment Analysis: Evaluating Lexicon-Based and Transformer-Based Models for Product Reviews</h4>
-                        <p>2025 International Conference on Computer and Applications (ICCA) • IEEE • 2025</p>
+                        <p class="pub-authors"><strong>M. Parikh</strong>, A. K. Elengovan, N. Seshagiri, R. Nimmala, B. M. Harve, P. Nutalapati, V. Soni</p>
+                        <p class="pub-venue">2025 International Conference on Computer and Applications (ICCA)</p>
                         <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Comparative study of VADER, TextBlob, BERT, and RoBERTa across electronics, movies, and restaurant review domains; RoBERTa achieved 89%+ accuracy</p>
+                        <p class="pub-cites">1 citation</p>
                         <a href="https://ieeexplore.ieee.org/document/11430747" target="_blank" class="view-link">View on IEEE Xplore →</a>
                     </div>
-
-                    <div class="award-card">
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
+                        <h4>Unified Data Management: A Comparative Study of Multi-Model vs Single-Model Database Architectures</h4>
+                        <p class="pub-authors"><strong>M. Parikh</strong>, N. Subramaniam, K. C. Cheekuri, V. S. C. Veerlapally, S. R. Keshireddy</p>
+                        <p class="pub-venue">2025 9th International Conference on Electronics, Communication and Aerospace Technology (ICECA)</p>
+                        <p class="pub-cites">1 citation</p>
+                        <a href="https://ieeexplore.ieee.org/document/11382964" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    </div>
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
                         <h4>A Hybrid Privacy Framework for Multi-Tenant Data Warehouses Using Tokenization and Dynamic Masking</h4>
-                        <p>2025 International Conference on Computer and Applications (ICCA) • IEEE • 2025</p>
+                        <p class="pub-authors">A. K. Elengovan, N. S, B. M. Harve, N. S. P. K. Yadati, P. Nutalapati, R. Keshava, <strong>M. Parikh</strong></p>
+                        <p class="pub-venue">2025 International Conference on Computer and Applications (ICCA)</p>
                         <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Integrated tokenization and dynamic data masking on AWS Redshift; achieves 100% masking accuracy with only 8.5% query latency overhead</p>
                         <a href="https://ieeexplore.ieee.org/document/11430815" target="_blank" class="view-link">View on IEEE Xplore →</a>
                     </div>
-
-                    <div class="award-card">
-                        <h4>Explainable AI for Autonomous Systems: a Framework for Trustworthy Decision-Making</h4>
-                        <p>2025 10th International Conference on Computer and Communication Engineering (ICCCE) • IEEE • August 2025</p>
-                        <a href="https://ieeexplore.ieee.org/document/11473362" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
+                        <h4>Adaptive Data Pipelines: A Cloud-Native Approach to Real-Time Analytics and Fault Tolerance</h4>
+                        <p class="pub-authors">H. Rehan, V. K. Venkataswamy, P. Keshap, <strong>M. Parikh</strong>, P. Anusha, S. N. Priya</p>
+                        <p class="pub-venue">2025 9th International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11597771" target="_blank" class="view-link">View on IEEE Xplore →</a>
                     </div>
-                    <div class="award-card">
-                        <h4>Resilient Autonomy: Securing Intelligent Systems Against Adversarial Attacks</h4>
-                        <p>2025 10th International Conference on Computer and Communication Engineering (ICCCE) • IEEE • August 2025</p>
-                        <a href="https://ieeexplore.ieee.org/document/11474169" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
+                        <h4>Data Foundations for a Successful AI Strategy: A Blueprint for AI-Ready Enterprises</h4>
+                        <p class="pub-authors">R. N. Kumar Dhenia, S. Mitinbhai Shah, A. R. Jha, <strong>M. Parikh</strong>, A. A. Soni</p>
+                        <p class="pub-venue">2025 International Conference on Decision Aid Sciences and Applications (DASA)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11498880" target="_blank" class="view-link">View on IEEE Xplore →</a>
                     </div>
-                    <div class="award-card">
-                        <h4>Secure and Scalable Data Sharing in IoT Environments with Blockchain Integration</h4>
-                        <p>2025 10th International Conference on Computer and Communication Engineering (ICCCE) • IEEE • August 2025</p>
-                        <a href="https://ieeexplore.ieee.org/document/11474215" target="_blank" class="view-link">View on IEEE Xplore →</a>
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
+                        <h4>Enhancing Cloud API Security Using Artificial Intelligence for Adaptive Threat Monitoring</h4>
+                        <p class="pub-authors">R. Keshava, <strong>M. Parikh</strong>, K. Jayabalan, S. K. Pandurangan, S. Govindaraj, R. Maruthi</p>
+                        <p class="pub-venue">2025 9th International Conference on I-SMAC (IoT in Social, Mobile, Analytics and Cloud) (I-SMAC)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11597820" target="_blank" class="view-link">View on IEEE Xplore →</a>
                     </div>
-                    <div class="award-card">
-                        <h4>Reinforcement Learning for Dynamic Workflow Optimization in CI/CD Pipelines</h4>
-                        <p>CICN Conference</p>
-                        <a href="https://www.cicn.in/" target="_blank" class="view-link">View Publication →</a>
-                    </div>
-                    <div class="award-card">
-                        <h4>Deep Learning for Automated Defect Detection in Industrial Manufacturing</h4>
-                        <p>ICAIN Conference</p>
-                        <a href="https://ieeexplore.ieee.org/document/11212369" target="_blank" class="view-link">View Publication →</a>
-                    </div>
-                    <div class="award-card">
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
                         <h4>Generative AI for ETL Automation: Revolutionizing Data Flow Management</h4>
-                        <p>2025 9th International Conference on Electronics, Communication and Aerospace Technology (ICECA) • IEEE • 2025</p>
+                        <p class="pub-authors">N. Kolli, <strong>M. Parikh</strong>, V. M. L. G. Nerella, K. Jayabalan, S. S. Krishnan, R.Maruthi</p>
+                        <p class="pub-venue">2025 9th International Conference on Electronics, Communication and Aerospace Technology (ICECA)</p>
                         <a href="https://ieeexplore.ieee.org/document/11382614" target="_blank" class="view-link">View on IEEE Xplore →</a>
                     </div>
-                    <div class="award-card">
-                        <h4>Enhancing Cloud API Security Using AI for Adaptive Threat Monitoring</h4>
-                        <p>DELCON2025</p>
+                    <div class="award-card pub-card" data-year="2025" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2025</span></div>
+                        <h4>Resilient Autonomy: Securing Intelligent Systems Against Adversarial Attacks</h4>
+                        <p class="pub-authors">P. Nutalapati, I. Sahoo, D. Kole, R. Keshava, <strong>M. Parikh</strong>, G. A. Gajwani, B. M. Harve</p>
+                        <p class="pub-venue">2025 10th International Conference on Computer and Communication Engineering (ICCCE)</p>
+                        <a href="https://ieeexplore.ieee.org/document/11474169" target="_blank" class="view-link">View on IEEE Xplore →</a>
                     </div>
-                    <div class="award-card">
-                        <h4>Adaptive Data Pipelines: A Cloud-Native Approach to Real-Time Analytics</h4>
-                        <p>GCAT 2024</p>
+                    <div class="award-card pub-card" data-year="2020" data-kind="Book">
+                        <div class="pub-top"><span class="pub-kind">Book</span><span class="pub-year">2020</span></div>
+                        <h4>Microsoft Power Platform: Power BI Data Visualization</h4>
+                        <p class="pub-venue">Power BI Data Visualization | Microsoft Power Platform</p>
+                        <p class="pub-cites">24 citations</p>
                     </div>
-                    <div class="award-card">
-                        <h4>Innovative Framework for Secure Web and Mobile Application Development in Fintech</h4>
-                        <p>2025 5th International Conference on Ubiquitous Computing and Intelligent Information Systems (ICUIS) • IEEE • 2025</p>
-                        <a href="https://ieeexplore.ieee.org/document/11380645" target="_blank" class="view-link">View on IEEE Xplore →</a>
-                    </div>
-                    <div class="award-card">
-                        <h4>Adaptive Resource Management in Cloud-Native Databases</h4>
-                        <p>2025 10th International Conference on Communication and Electronics Systems (ICCES) • IEEE Xplore</p>
-                        <a href="https://ieeexplore.ieee.org/document/11336962" target="_blank" class="view-link">View on IEEE Xplore →</a>
-                    </div>
-                    <div class="award-card">
-                        <h4>AI-Powered Fraud Analytics in Supply Chain Networks</h4>
-                        <p>IEEE Conference • 2025</p>
-                    </div>
-                    <div class="award-card">
-                        <h4>Unified Data Management: Multi-Model vs Single-Model Database Architectures</h4>
-                        <p>2025 9th International Conference on Electronics, Communication and Aerospace Technology (ICECA) • IEEE • 2025</p>
-                        <a href="https://ieeexplore.ieee.org/document/11382964" target="_blank" class="view-link">View on IEEE Xplore →</a>
-                    </div>
-                    <div class="award-card">
-                        <h4>Hybrid Edge Cloud Predictive Framework for Smart Home Energy Management</h4>
-                        <p>IEEE - Published</p>
-                        <a href="https://ieeexplore.ieee.org/document/11300847" target="_blank" class="view-link">View Publication →</a>
-                    </div>
-                    <div class="award-card">
-                        <h4>EduGuard-KG: Knowledge-Graph-Guided Multimodal Learning for Contagion Control</h4>
-                        <p>IEEE JBHI - Submitted</p>
-                    </div>
-                    <div class="award-card">
+                    <div class="award-card pub-card" data-year="2020" data-kind="IEEE Conference">
+                        <div class="pub-top"><span class="pub-kind">IEEE Conference</span><span class="pub-year">2020</span></div>
                         <h4>Evaluation of a Static Dashboard to Support Resident Learning and Competency Assessment</h4>
-                        <p>2020 Workshop on Visual Analytics in Healthcare (VAHC) • IEEE • November 2020</p>
+                        <p class="pub-authors">S. Vennemeyer, <strong>M. Parikh</strong>, S. Mu, B. Kinnear, D. T. Y. Wu</p>
+                        <p class="pub-venue">2020 Workshop on Visual Analytics in Healthcare (VAHC)</p>
                         <p style="margin-top: 8px; font-size: 0.85em; color: var(--text-secondary);">Co-authored with University of Cincinnati College of Medicine team; evaluated dashboard design for Internal Medicine Residency Program using semi-structured interviews and card-sorting</p>
                         <a href="https://ieeexplore.ieee.org/document/9588429" target="_blank" class="view-link">View on IEEE Xplore →</a>
                     </div>
+                </div>
 
-                    <div class="award-card">
-                        <h4>Patent – Enterprise Data Architecture Innovation</h4>
-                        <p>Google Scholar Patent Record • Filed invention in enterprise data systems</p>
-                        <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IKrH0tgAAAAJ&citation_for_view=IKrH0tgAAAAJ:hqOjcs7Dif8C" target="_blank" class="view-link">View Patent →</a>
+                <h3 style="color: var(--text-primary); margin-bottom: 24px; margin-top: 16px; font-size: 1.5em;">Under Review</h3>
+                <div class="award-cards">
+                    <div class="award-card pub-card" data-year="2026" data-kind="Under Review">
+                        <div class="pub-top"><span class="pub-kind">Under Review</span><span class="pub-year">2026</span></div>
+                        <h4>EduGuard-KG: Knowledge-Graph-Guided Multimodal Learning for Contagion Control</h4>
+                        <p class="pub-venue">IEEE Journal of Biomedical and Health Informatics (JBHI)</p>
                     </div>
                 </div>
             </div>
@@ -1921,9 +2272,9 @@
                 <!-- STATS ROW -->
                 <div class="stats" style="margin-bottom:28px;">
                     <div class="stat-card"><div class="stat-number">14+</div><div class="stat-label">Years Active</div></div>
-                    <div class="stat-card"><div class="stat-number">250</div><div class="stat-label">Peer Reviews</div></div>
+                    <div class="stat-card"><div class="stat-number">369</div><div class="stat-label">Peer Reviews</div></div>
                     <div class="stat-card"><div class="stat-number">13+</div><div class="stat-label">Awards</div></div>
-                    <div class="stat-card"><div class="stat-number">26</div><div class="stat-label">Publications</div></div>
+                    <div class="stat-card"><div class="stat-number">48</div><div class="stat-label">Publications</div></div>
                 </div>
 
                 <!-- ACTIVITY CHART -->
@@ -1991,8 +2342,8 @@
                 targetPage.classList.add('active');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
 
-                if (pageId === 'peer-review' && !map) {
-                    setTimeout(initMap, 300);
+                if (pageId === 'peer-review') {
+                    setTimeout(() => { if (!map) { initMap(); } else { map.invalidateSize(); } }, 300);
                 }
             }
         }
@@ -2004,7 +2355,7 @@
                 return;
             }
 
-            map = L.map('map').setView([20, 40], 2);
+            map = L.map('map', { worldCopyJump: true, scrollWheelZoom: false }).setView([20, 40], 2);
 
             L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png', {
                 attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
@@ -2035,6 +2386,8 @@
 
                 marker.bindPopup(`<strong>${country.name}</strong><br>Reviews: ${country.count}`);
             });
+
+            setTimeout(() => map.invalidateSize(), 200);
         }
 
         function toggleTheme() {
@@ -2077,6 +2430,19 @@
             }
         }
 
+        function setupPubFilters() {
+            const btns = document.querySelectorAll('.pub-filter');
+            btns.forEach(btn => btn.addEventListener('click', () => {
+                btns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                const f = btn.dataset.f;
+                document.querySelectorAll('#publicationsList .pub-card').forEach(card => {
+                    let show = f === 'all' || (f[0] === 'y' && card.dataset.year === f.slice(1)) || (f[0] === 'k' && card.dataset.kind === f.slice(1));
+                    card.classList.toggle('pub-hidden', !show);
+                });
+            }));
+        }
+
         document.addEventListener('DOMContentLoaded', () => {
             const savedTheme = localStorage.getItem('theme') || 'light';
             const icon = document.getElementById('theme-icon');
@@ -2089,6 +2455,7 @@
             setupSearch('judgingSearch', 'judgingList');
             setupSearch('publicationsSearch', 'publicationsList');
 
+            setupPubFilters();
             initTimeline();
         });
 
@@ -2146,7 +2513,7 @@
           { year: 2024, month: "Dec", cat: "publication", icon: "📄", title: "Secure Data Sharing in IoT – ICCCE", desc: "Blockchain integration for secure data sharing in IoT environments", meta: "ICCCE · IIUM Malaysia · 2024" },
           { year: 2024, month: "Nov", cat: "community", icon: "👥", title: "Fellow – British Computer Society (FBCS)", desc: "Elected Fellow of the Chartered Institute for IT, the leading body for computing professionals in the UK", meta: "BCS · United Kingdom", impact: "International fellowship" },
           { year: 2024, month: "Oct", cat: "community", icon: "👥", title: "Fellow – IETE India", desc: "Elected Fellow of Institution of Electronics and Telecommunication Engineers, India's leading professional society", meta: "IETE · India" },
-          { year: 2024, month: "Sep", cat: "community", icon: "🌐", title: "Peer Review: 250 Reviews across 30+ Conferences", desc: "Ongoing peer review work across 30+ conferences in 8 countries, spanning Malaysia, USA, India, UAE, and more", meta: "Multiple International Conferences · 8 Countries", impact: "250 total reviews" },
+          { year: 2024, month: "Sep", cat: "community", icon: "🌐", title: "Peer Review: 369 Reviews across 68 Conferences &amp; Journals", desc: "Ongoing peer review work across 68 conferences and journals in 8 countries, spanning Malaysia, USA, India, UAE, and more", meta: "Multiple International Conferences · 8 Countries", impact: "369 total reviews" },
           { year: 2024, month: "Aug", cat: "community", icon: "👥", title: "Distinguished Fellow – SCRS", desc: "Distinguished Fellow designation from Society for Cybernetics and Research Systems", meta: "SCRS · International" },
           { year: 2024, month: "May", cat: "career", icon: "💼", title: "Lead Enterprise Data Architect – Cytel Inc.", desc: "Architected Microsoft Fabric enterprise data platform for 1,500-employee global org. Increased data availability 80%. Delivered $100K–$250K annual cost savings.", meta: "Cytel · Richmond, TX · May 2024 – Present", impact: "$100K–$250K annual savings" },
           { year: 2024, month: "Mar", cat: "media", icon: "📝", title: "India.com – Digital Transformation in the AI Era", desc: "Byline article: Lessons from the Front Lines of digital transformation; published in major Indian national outlet", meta: "India.com · 2024" },
